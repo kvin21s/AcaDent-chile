@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AcaDent Chile</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+    header {
+      background: #003C77;
+      color: #fff;
+      padding: 1rem;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      justify-content: center;
+    }
+    nav li {
+      margin: 0 1rem;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 100px 20px 50px;
+      min-height: 100vh;
+    }
+    /* Sección Home */
+    #home {
+      background: url('https://via.placeholder.com/1920x800') no-repeat center center/cover;
+      color: #fff;
+      text-align: center;
+      position: relative;
+    }
+    #home::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.5);
+    }
+    #home .content {
+      position: relative;
+      z-index: 2;
+      padding-top: 100px;
+    }
+    /* Quiénes Somos */
+    #quienes-somos {
+      background: #f4f4f4;
+    }
+    /* Catálogo de Productos */
+    #catalogo {
+      background: #fff;
+    }
+    .productos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .producto {
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin: 10px;
+      padding: 15px;
+      width: 300px;
+      text-align: center;
+    }
+    .producto img {
+      max-width: 100%;
+      border-radius: 5px;
+    }
+    /* Campus */
+    #campus {
+      background: #f4f4f4;
+    }
+    /* Contacto */
+    #contacto {
+      background: #fff;
+    }
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+    }
+    form input, form textarea {
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    form button {
+      padding: 10px;
+      border: none;
+      background: #003C77;
+      color: #fff;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    /* Footer */
+    footer {
+      background: #003C77;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+      }
+      nav li {
+        margin: 10px 0;
+      }
+      .productos {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navegación fija -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Inicio</a></li>
+        <li><a href="#quienes-somos">Quiénes Somos</a></li>
+        <li><a href="#catalogo">Catálogo</a></li>
+        <li><a href="#campus">Campus</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Sección Home -->
+  <section id="home">
+    <div class="content">
+      <h1>Bienvenidos a AcaDent Chile</h1>
+      <p>Insumos dentales de calidad para estudiantes y profesionales.</p>
+      <a href="#catalogo" style="background:#00B2FF; padding:10px 20px; color:#fff; border-radius:5px; text-decoration:none;">Ver Catálogo</a>
+    </div>
+  </section>
+
+  <!-- Sección Quiénes Somos -->
+  <section id="quienes-somos">
+    <h2>Quiénes Somos</h2>
+    <p style="max-width:800px; margin:20px auto;">
+      En AcaDent Chile somos una empresa comprometida con el futuro de la odontología, ofreciendo insumos de alta calidad a estudiantes y profesionales. Conectamos la formación académica con la práctica clínica.
+    </p>
+  </section>
+
+  <!-- Sección Catálogo de Productos -->
+  <section id="catalogo">
+    <h2>Catálogo de Productos</h2>
+    <div class="productos">
+      <!-- Producto 1 -->
+      <div class="producto">
+        <img src="https://via.placeholder.com/300x200" alt="Kit Básico">
+        <h3>Kit Básico</h3>
+        <p>Incluye todos los insumos esenciales para estudiantes de odontología.</p>
+      </div>
+      <!-- Producto 2 -->
+      <div class="producto">
+        <img src="https://via.placeholder.com/300x200" alt="Instrumental Clínico">
+        <h3>Instrumental Clínico</h3>
+        <p>Herramientas de precisión y calidad para el profesional dental.</p>
+      </div>
+      <!-- Producto 3 -->
+      <div class="producto">
+        <img src="https://via.placeholder.com/300x200" alt="Materiales de Bioseguridad">
+        <h3>Materiales de Bioseguridad</h3>
+        <p>Productos pensados para garantizar la seguridad en entornos clínicos.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Campus -->
+  <section id="campus">
+    <h2>Campus AcaDent</h2>
+    <p style="max-width:800px; margin:20px auto;">
+      Participa en nuestros eventos, ferias y talleres exclusivos para la comunidad estudiantil y profesional. Descubre nuestros convenios con universidades y programas de embajadores.
+    </p>
+    <ul style="max-width:800px; margin:20px auto; list-style: square;">
+      <li>Feria Anual de Insumos Dentales</li>
+      <li>Talleres y Seminarios</li>
+      <li>Programa de Embajadores</li>
+    </ul>
+  </section>
+
+  <!-- Sección Contacto -->
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <form>
+      <input type="text" name="nombre" placeholder="Tu nombre">
+      <input type="email" name="correo" placeholder="Tu correo">
+      <input type="text" name="universidad" placeholder="Universidad (opcional)">
+      <textarea name="mensaje" placeholder="Escribe tu mensaje aquí..." rows="4"></textarea>
+      <button type="submit">Enviar Mensaje</button>
+    </form>
+    <div style="text-align:center; margin-top:20px;">
+      <p>Email: contacto@acadent.cl</p>
+      <p>Tel: +56 9 XXX XXXX</p>
+      <p>Instagram: @acadent.cl</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 AcaDent Chile. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
